@@ -1,9 +1,12 @@
+import { Container } from './styles/Container.styled';
 import { StyledHeader } from './styles/Header.styled';
 
 const Header = () => {
   return (
     <StyledHeader bg="red">
-      <h1>Hubble</h1>
+      <Container>
+        <h1>Hubble</h1>
+      </Container>
     </StyledHeader>
   );
 };
