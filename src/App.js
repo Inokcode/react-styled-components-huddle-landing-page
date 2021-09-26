@@ -2,6 +2,7 @@ import { ThemeProvider } from 'styled-components';
 import Header from './components/Header';
 import { Container } from './components/styles/Container.styled';
 import GlobalStyles from './components/styles/Global';
+import content from './content';
 
 const theme = {
   colors: {
@@ -9,6 +10,7 @@ const theme = {
     body: '#fff',
     footer: '#003333',
   },
+  mobile: '768px',
 };
 
 function App() {
@@ -17,7 +19,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Header />
-        <Container></Container>
+        <Container>
+          {content.map((item, index) => (
+            <p>{item.title}</p>
+          ))}
+        </Container>
       </ThemeProvider>
     </>
   );
